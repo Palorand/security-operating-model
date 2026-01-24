@@ -833,12 +833,51 @@ For each control:
 
 ---
 
+## Implementation Gaps and Planned Work
+
+The following controls are not fully implemented. This section provides transparency on current gaps.
+
+### Partial Implementations
+
+| Control | Gap | Plan | Target Date |
+|---------|-----|------|-------------|
+| 5.7 Threat Intelligence | Feeds integrated but no formal threat intel program | Hire threat intel analyst or subscribe to managed service | Q3 |
+| 5.12 Classification of Information | Policy exists but enforcement inconsistent | Implement automated classification tooling | Q2 |
+| 5.19 Supplier Relationships | Assessment process new, backlog of existing vendors | Clear vendor assessment backlog | Q2 |
+| 6.3 Security Awareness | Training exists but effectiveness not measured | Implement competency testing | Q2 |
+| 8.11 Data Masking | Implemented post-incident, not all environments covered | Extend to remaining test environments | Q1 |
+| 8.12 Data Leakage Prevention | Email DLP only, endpoint DLP not deployed | Endpoint DLP rollout | Q2 |
+| 8.15 Logging | 60% coverage, gaps in legacy applications | Complete SIEM onboarding | Q1 |
+| 8.16 Monitoring Activities | Detection rules limited, many gaps identified by red team | Detection engineering program | Q2-Q3 |
+
+### Planned (Not Yet Started)
+
+| Control | Current State | Plan | Target Date |
+|---------|---------------|------|-------------|
+| 5.30 ICT Readiness for Business Continuity | DR plan exists but not tested | Implement DR testing program | Q3 |
+| 8.10 Information Deletion | Manual process, no automation | Automate retention enforcement | Q3 |
+| 8.23 Web Filtering | DNS filtering only, no proxy | Evaluate web proxy solutions | Q4 |
+
+### Known Gaps Requiring Investment
+
+| Control | Gap | Blocker | Risk Accepted? |
+|---------|-----|---------|----------------|
+| 6.8 Security Event Reporting | No anonymous reporting channel | Budget for tool | No - planned Q2 |
+| 8.2 Privileged Access | No PAM solution, manual JIT process | Budget and capacity | Partial - compensating controls |
+| 8.29 Security Testing | No DAST in pipeline, manual only | Tool selection pending | No - planned Q1 |
+
+---
+
 ## Summary
 
-| Category | Total Controls | Applicable | Automated | Semi-Automated | Manual |
-|----------|---------------|------------|-----------|----------------|--------|
-| 5. Organizational | 37 | 37 | 8 | 18 | 11 |
-| 6. People | 8 | 8 | 1 | 2 | 5 |
-| 7. Physical | 14 | Limited | N/A | N/A | Outsourced |
-| 8. Technological | 34 | 34 | 22 | 9 | 3 |
-| **Total** | 93 | 79+ | 31 | 29 | 19 |
+| Category | Total Controls | Applicable | Fully Implemented | Partial | Planned | Gap |
+|----------|---------------|------------|-------------------|---------|---------|-----|
+| 5. Organizational | 37 | 37 | 30 | 5 | 2 | 0 |
+| 6. People | 8 | 8 | 6 | 1 | 0 | 1 |
+| 7. Physical | 14 | Limited | N/A | N/A | N/A | Outsourced |
+| 8. Technological | 34 | 34 | 26 | 5 | 2 | 1 |
+| **Total** | 93 | 79+ | 62 | 11 | 4 | 2 |
+
+**Implementation Rate:** 78% fully implemented, 14% partial, 5% planned, 3% gap
+
+This is a realistic assessment. Organizations claiming 100% implementation are either lying or not looking closely enough.

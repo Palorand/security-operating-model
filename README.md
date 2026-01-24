@@ -19,6 +19,7 @@ The goal is pragmatic security governance that actually works in engineering-dri
 - Execution focus: 90-day plans and 12-month roadmaps with measurable outcomes
 - Governance that scales: exception handling, risk acceptance, security reviews
 - Engineering alignment: security integrated into SDLC, not bolted on
+- Honest retrospection: what failed, what we abandoned, and what we learned
 
 **Quick evaluation path:**
 
@@ -30,6 +31,10 @@ Start here:
 Then validate execution:
   docs/06-kpis-and-metrics.md             # How we measure progress
   docs/08-exceptions-and-risk-acceptance.md  # How we handle reality
+
+Check what we learned the hard way:
+  docs/12-evolution-and-lessons-learned.md   # Failures and abandoned approaches
+  docs/postmortems/                          # Real incidents, anonymized
 
 Finally, check compliance linkage:
   mapping/iso27001-annexA-to-controls.md  # ISO 27001 mapped to concrete controls
@@ -86,10 +91,36 @@ Finally, check compliance linkage:
 
 | Standard | Approach |
 |----------|----------|
-| ISO 27001 | Annex A mapped to technical controls |
+| ISO 27001 | Annex A mapped with implementation gaps noted |
 | Evidence | Automated where possible, governed otherwise |
 | Audits | Continuous compliance, not annual scramble |
 | Suppliers | Security questionnaire and assessment process |
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Supply Chain
+
+| Element | Coverage |
+|---------|----------|
+| Dependency Scanning | SCA with remediation SLAs |
+| SBOM | Software bill of materials for each release |
+| Artifact Signing | Container and release signature verification |
+| Build Security | CI/CD hardening and secrets management |
+
+</td>
+<td width="50%" valign="top">
+
+### Learning Culture
+
+| Element | Coverage |
+|---------|----------|
+| Postmortems | Blameless incident retrospectives |
+| Failed Initiatives | What we tried and abandoned |
+| Metric Evolution | KPIs that didn't work and why |
+| Framework Changes | How our approach evolved over time |
 
 </td>
 </tr>
@@ -129,7 +160,11 @@ security-operating-model/
 │   ├── 08-exceptions-and-risk-acceptance.md
 │   ├── 09-security-review-process.md
 │   ├── 10-incident-operating-loop.md
-│   └── 11-iso27001-in-practice.md
+│   ├── 11-iso27001-in-practice.md
+│   ├── 12-evolution-and-lessons-learned.md
+│   ├── 13-supply-chain-security.md
+│   └── postmortems/                   # Anonymized incident learnings
+│       └── PM-001-staging-database-exposure.md
 ├── templates/                          # Reusable governance artifacts
 │   ├── risk-register.csv
 │   ├── risk-acceptance.md
@@ -137,7 +172,8 @@ security-operating-model/
 │   ├── security-design-review.md
 │   ├── supplier-security-questionnaire.md
 │   ├── kpi-dashboard-spec.md
-│   └── decision-memo.md
+│   ├── decision-memo.md
+│   └── executive-security-report.md
 ├── decision-memos/                     # Example arbitration decisions
 │   ├── DM-001-deny-public-exposure.md
 │   ├── DM-002-secrets-management-standard.md
@@ -166,6 +202,8 @@ security-operating-model/
 | [09-security-review-process.md](docs/09-security-review-process.md) | Design review methodology |
 | [10-incident-operating-loop.md](docs/10-incident-operating-loop.md) | Incident response procedures |
 | [11-iso27001-in-practice.md](docs/11-iso27001-in-practice.md) | Practical ISO 27001 implementation |
+| [12-evolution-and-lessons-learned.md](docs/12-evolution-and-lessons-learned.md) | Framework evolution, failures, and what we learned |
+| [13-supply-chain-security.md](docs/13-supply-chain-security.md) | Dependency and build pipeline security |
 
 ---
 
@@ -178,6 +216,18 @@ These document real arbitration decisions with full context on trade-offs:
 | [DM-001](decision-memos/DM-001-deny-public-exposure.md) | Deny public exposure by default - policy-as-code enforcement |
 | [DM-002](decision-memos/DM-002-secrets-management-standard.md) | Secrets management standard - short-lived credentials, no long-lived keys |
 | [DM-003](decision-memos/DM-003-exceptions-timebox.md) | All exceptions are timeboxed - 90-day maximum with renewal process |
+
+---
+
+## Postmortems
+
+Anonymized incident postmortems that shaped our current practices:
+
+| Incident | Key Lesson |
+|----------|------------|
+| [PM-001](docs/postmortems/PM-001-staging-database-exposure.md) | Staging database exposed to internet - led to environment parity controls |
+
+These are sanitized versions of real incidents. Names, dates, and identifying details have been changed, but the lessons are genuine.
 
 ---
 
